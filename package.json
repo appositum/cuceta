@@ -1,0 +1,21 @@
+{
+  "name": "cuceta",
+  "version": "0.1.0",
+  "scripts": {
+    "start:native": "lib/bs/native/index.native",
+    "clean": "bsb -clean-world",
+    "build:js": "bsb -make-world -backend js",
+    "build:native": "bsb -make-world -backend native",
+    "build:bytecode": "bsb -make-world -backend bytecode",
+    "watch": "bsb -make-world -w"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^4.0.18",
+    "bsb-native": "^4.0.7000"
+  }
+}
