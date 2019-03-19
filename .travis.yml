@@ -1,0 +1,12 @@
+os: osx
+language: ocaml
+
+install:
+  - brew install yarn
+  - yarn global add esy
+
+script:
+  - esy
+
+notifications:
+  email: false

@@ -1,21 +1,20 @@
 {
   "name": "cuceta",
   "version": "0.1.0",
-  "scripts": {
-    "start:native": "lib/bs/native/index.native",
-    "clean": "bsb -clean-world",
-    "build:js": "bsb -make-world -backend js",
-    "build:native": "bsb -make-world -backend native",
-    "build:bytecode": "bsb -make-world -backend bytecode",
-    "watch": "bsb -make-world -w"
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "bin": "cuceta",
+      "includePackages": [ "lib" ]
+    }
   },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "^4.0.18",
-    "bsb-native": "^4.0.7000"
-  }
+  "scripts": { "run": "esy x cuceta", "repl": "esy build dune utop" },
+  "author": "Eddie",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@opam/dune": "1.8.2",
+    "@opam/utop": "2.3.0",
+    "ocaml": "^4.7.1004"
+  },
+  "devDependencies": { "@opam/merlin": "3.2.2" }
 }

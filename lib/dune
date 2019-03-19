@@ -1,0 +1,3 @@
+(library
+  (name cuceta)
+  (public_name cuceta))
