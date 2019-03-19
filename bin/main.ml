@@ -1,3 +1,5 @@
-open Cuceta.Parser
+open Cuceta
 
-let () = print_endline "ola puta"
+let p = pure 'e'
+
+let () = print_endline "bella ciao"

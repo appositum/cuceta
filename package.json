@@ -4,7 +4,8 @@
   "esy": {
     "build": "dune build -p #{self.name}",
     "release": {
-      "bin": "cuceta"
+      "bin": "cuceta",
+      "includePackages": [ "lib" ]
     }
   },
   "scripts": { "run": "esy x cuceta", "repl": "esy build dune utop" },
